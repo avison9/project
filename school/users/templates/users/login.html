@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +11,11 @@
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
 
-    <!-- Title Page-->
-    <title>Login</title>
+    {% if tag %}
+        <title>{{ tag }}</title>
+    {% else %}
+        <title>Login</title>
+    {% endif %}
 
     <!-- Fontfaces CSS-->
     <link href="{% static 'users/css/font-face.css' %}" rel="stylesheet" media="all">
@@ -35,7 +39,7 @@
     <link href="{% static 'users/css/theme.css' %}" rel="stylesheet" media="all">
 
 </head>
-
+{% block content %}
 <body class="animsition">
     <div class="page-wrapper">
         <div class="page-content--bge5">
@@ -80,7 +84,7 @@
         </div>
 
     </div>
-
+{%endblock%}
     <!-- Jquery JS-->
     <script src="{% static 'users/vendor/jquery-3.2.1.min.js' %}"></script>
     <!-- Bootstrap JS-->
