@@ -21,4 +21,9 @@ class Student(models.Model):
 
 class Teacher(models.Model):
 
+
+	class Meta:
+		model = Student
+		fields = ['first_name','last_name','address']
+
 	
