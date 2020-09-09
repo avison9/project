@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Student, Teacher, Subjects
+from .models import Student, Teacher, Subjects,Related
 
 
 admin.site.register(Student)
 admin.site.register(Teacher)
 admin.site.register(Subjects)
-# admin.site.register()
+admin.site.register(Related)
