@@ -21,7 +21,22 @@ class Student(models.Model):
 	def __str__(self):
 		return f'{self.first_name}{self.last_name}'
 
+class Teacher(models.Model):
+	telephone = models.IntegerField()
 
+	class Meta:
+		model = Student
+		fields = ['username','first_name','last_name','gender','address']
+
+
+	def __str__(self):
+			return self.first_name
+
+class Subjects(models.Model):
+	subject = model.CharField(max_length=100)
+
+	def __str__(self):
+		return self.subject
 
 
 	
